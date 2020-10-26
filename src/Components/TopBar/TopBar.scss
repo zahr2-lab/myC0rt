@@ -1,0 +1,23 @@
+.topBar{
+  height: 2.5rem;
+  background: sandybrown;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+  color: sandybrown;
+  &-Burger{
+    color:white;
+    transform: rotate(90deg)
+  }
+  &-Switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    background: white;
+    border-radius: .2rem;
+    .list{
+      transform: rotate(90deg)
+    }
+  }
+}
