@@ -2,12 +2,12 @@ import React from "react";
 
 import "./TopBar.scss";
 
-const TopBar = (props) => {
+const TopBar = () => {
   return (
     <div className="topBar">
       <div className="topBar-Burger">|||</div>
-      <div className="topBar-Switch" onClick={() => props.setList(!props.list)}>
-        <span className={!props.list && "list"}>[#]</span>
+      <div className="topBar-Switch" onClick={() => console.log("cart")}>
+        <span>[#]</span>
       </div>
     </div>
   );

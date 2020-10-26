@@ -4,10 +4,10 @@ import Products from "../ProductsList/ProductsList";
 
 import "./Page.scss";
 
-const Page = (props) => {
+const Page = () => {
   return (
     <div className="page">
-      <Products list={props.list} />
+      <Products />
     </div>
   );
 };

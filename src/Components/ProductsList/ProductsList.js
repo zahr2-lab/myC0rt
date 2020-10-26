@@ -3,14 +3,12 @@ import Card from "../Card/Card";
 import "./ProductsList.scss";
 import "./products";
 
-const ProductList = (props) => {
+export default function ProductList() {
   return (
-    <div className={`productsList ${props.list && "listView"}`}>
+    <div className="productsList">
       {products.map((product) => (
         <Card product={product} key={product.id} />
       ))}
     </div>
   );
-};
-
-export default ProductList;
+}
