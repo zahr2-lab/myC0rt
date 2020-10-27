@@ -5,7 +5,9 @@ export default function Menu() {
   return (
     <div className="menuContainer">
       <div className="menu-header">
-        <div className="menu-userImg"></div>
+        <div className="menu-userImg">
+          <img className="menu-Img" src="/img/profile.png" alt="" />
+        </div>
         sign In
       </div>
       <ul>
