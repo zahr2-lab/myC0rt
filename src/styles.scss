@@ -11,3 +11,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+.container{
+  display: flex;
+}
+
+.page{
+  flex: 1 1 60%;
+  height: 100vh;
+  overflow: hidden;
+}
