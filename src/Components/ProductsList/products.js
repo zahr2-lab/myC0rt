@@ -32,5 +32,19 @@ export default products = [
     name: "mango",
     catagory: "fruits",
     price: 7
+  },
+
+  {
+    id: 6,
+    name: "meat",
+    catagory: "proteins",
+    price: 10
+  },
+
+  {
+    id: 7,
+    name: "chicken",
+    catagory: "proteins",
+    price: 10
   }
 ];

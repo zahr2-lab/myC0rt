@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Controll.scss";
 
-const Controll = () => {
-  const [count, setCount] = useState(0);
+const Controll = ({ id, quantity }) => {
+  const [count, setCount] = useState(quantity);
   return (
     <div className="controll">
       <div
