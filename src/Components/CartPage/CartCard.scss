@@ -1,0 +1,49 @@
+.cartItems{
+  height: calc(100vh - 7rem);
+  overflow: auto;
+}
+
+
+.cartCard{
+  display: flex;
+  justify-content: space-evenly  ;
+  height:fit-content;
+  align-items: center;
+  border: 1px solid sandybrown;
+  border-radius: .5rem;
+  flex: 1 1 100%;
+  margin: .3rem;
+  flex-wrap: wrap;
+  
+
+  &-img{
+    width: 5rem;
+    height: 5rem;
+    }
+    
+    
+  
+  &-NamePrice  {
+  width: 100% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .2rem;
+  }
+  
+  &-content{
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center
+  }
+  
+  &-name{
+  margin: .3rem;
+  font-size:1.6rem;
+  color: tan
+  }
+  
+  }
+  
+  

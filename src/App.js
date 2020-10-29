@@ -2,7 +2,7 @@ import React from "react";
 import Page from "./Components/Page/Page";
 import TopBar from "./Components/TopBar/TopBar";
 import { atom, useRecoilValue } from "recoil";
-import CartPage from "./Components/ShoppingCart/CartPage";
+import CartPage from "./Components/CartPage/CartPage";
 import Menu from "./Components/Menu/Menu";
 import "./styles.scss";
 
