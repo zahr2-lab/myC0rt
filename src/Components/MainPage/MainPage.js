@@ -1,6 +1,7 @@
 import React from "react";
 import { useSetRecoilState } from "recoil";
 import { pageState } from "../Page/Page";
+import "./MainPage.scss";
 
 const pages = [
   { name: "fruits" },
@@ -14,7 +15,9 @@ export default function MainPage() {
     <div>
       {pages.map((page, index) => (
         <div key={index}>
-          <div onClick={() => setPage(page.name)}>{page.name}</div>
+          <div className="pagesTitle" onClick={() => setPage(page.name)}>
+            {page.name}
+          </div>
         </div>
       ))}
     </div>

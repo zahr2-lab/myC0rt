@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Products from "../ProductsList/ProductsList";
-import { atom, useRecoilValue } from "recoil";
+import { atom, useRecoilValue, useSetRecoilState } from "recoil";
 import MainPage from "../MainPage/MainPage";
 import products from "../ProductsList/products";
 import "./Page.scss";
@@ -22,18 +22,20 @@ export const productsQuantityState = atom({
 
 const Page = () => {
   const page = useRecoilValue(pageState);
-  const productsList = useRecoilValue(productsState);
+  const setProductList = useSetRecoilState(productsState);
 
   useEffect(() => {
+    const a = [];
     products.map((obj) =>
-      productsList.push({
-        id: productsList.length,
+      a.push({
+        id: obj.id,
         name: obj.name,
         price: obj.price,
         catagory: obj.catagory
       })
     );
-  }, []);
+    setProductList(a);
+  }, [setProductList]);
 
   return (
     <div className="page">

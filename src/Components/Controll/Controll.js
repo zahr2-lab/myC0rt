@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Controll.scss";
 import { atomFamily, useRecoilState } from "recoil";
 import { productsQuantityState } from "../Page/Page";
+import { cartListState } from "../CartPage/CartPage";
 
 export const productQuantityState = atomFamily({
   key: "productQuantity",
@@ -13,25 +14,25 @@ const Controll = (props) => {
   const [{ id, quantity }, setProductQuantity] = useRecoilState(
     productQuantityState(props.id)
   );
-
   const [productsQuantity, setProductsQuantity] = useRecoilState(
     productsQuantityState
   );
-
+  const [cartList, setCartList] = useRecoilState(cartListState);
   const [count, setCount] = useState(quantity);
 
-  useEffect(() => {
-    setProductQuantity({ id: props.id, quantity: 0 });
-  }, []);
-
   const action = (add) => {
-    add ? setCount(count + 1) : setCount(count - 1);
-
-    setProductQuantity({ id, quantity });
-
-    add
-      ? setProductsQuantity(productsQuantity + 1)
-      : setProductsQuantity(productsQuantity - 1);
+    const newCartList = cartList.filter((obj) => obj.id !== props.id);
+    var a;
+    if (add) {
+      a = count + 1;
+      setProductsQuantity(productsQuantity + 1);
+    } else {
+      a = count - 1;
+      setProductsQuantity(productsQuantity - 1);
+    }
+    setCount(a);
+    setProductQuantity({ id, quantity: a });
+    setCartList([...newCartList, { id: props.id, quantity: a }]);
   };
 
   return (

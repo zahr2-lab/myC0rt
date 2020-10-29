@@ -10,7 +10,7 @@ const Card = ({ product }) => {
         <div className="card-name">{product.name}</div>
         <div className="card-price">$ {product.price}</div>
       </div>
-      <Controll />
+      <Controll id={product.id} />
     </div>
   );
 };
