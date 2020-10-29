@@ -17,7 +17,7 @@ export const productsState = atom({
 
 export const productsQuantityState = atom({
   key: "productsQuantity",
-  default: []
+  default: 0
 });
 
 const Page = () => {

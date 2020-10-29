@@ -1,11 +1,13 @@
 import React from "react";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { cartState, menuState } from "../../App.js";
+import { productsQuantityState } from "../Page/Page";
 import "./TopBar.scss";
 
 export default function TopBar() {
   const [cart, setCart] = useRecoilState(cartState);
   const [menu, setMenu] = useRecoilState(menuState);
+  const quantity = useRecoilValue(productsQuantityState);
 
   return (
     <div className="topBar">
@@ -17,7 +19,7 @@ export default function TopBar() {
           <span>&#8962;</span>
         ) : (
           <>
-            <span className="topBar-Cart-point">1</span>
+            <span className="topBar-Cart-point">{quantity}</span>
             <span>&#128722;</span>
           </>
         )}
